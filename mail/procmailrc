@@ -1,0 +1,21 @@
+FORMAIL=/usr/bin/formail
+MAILDIR=$HOME/Mail
+LOGFILE=$HOME/Mail/log
+SENDER=`formail -c -xFrom:`
+
+:0fwh
+| $FORMAIL -A"Reply-To: krdwrd@krdwrd.org, $SENDER" -IDkim-signature -IDomainkey-signature
+
+:0c
+list
+
+:0c
+! krdwrd@coders.de
+
+:0c
+! egon
+
+:0: $MAILDIR/mhonarch.lock
+| cat - ; $HOME/trunk/src/utils/mail/addmsg.sh
+
+

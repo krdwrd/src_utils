@@ -1,5 +1,5 @@
 #!/bin/sh
 
-. ./mail.conf
+. `dirname $0`/mail.conf
 
 mhonarc -add -spammode $MBOX -outdir $ARCHIVE
