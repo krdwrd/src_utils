@@ -16,6 +16,6 @@ list
 ! egon
 
 :0: $MAILDIR/mhonarch.lock
-| cat - ; $HOME/trunk/src/utils/mail/addmsg.sh
+| cat - > /dev/null; $HOME/utils/trac/searchexternal/mailutils/update.sh
 
 
