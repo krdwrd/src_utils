@@ -1,4 +1,5 @@
 select count(distinct submissions.page_id) as cunique,
+       count(submissions.id) as ctotal,
        name 
 from submissions, users
 where users.id=user_id and
