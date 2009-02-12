@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo /etc/init.d/wwwoffle stop && sleep 2 && sudo /etc/init.d/wwwoffle start && sudo /etc/init.d/wwwoffle.krdwrd start
