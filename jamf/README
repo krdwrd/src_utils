@@ -1,0 +1,9 @@
+The KrdWrd Components for JAMF
+
+Install
++++++++
+
+* Copy this directory to your jamfserver/Components directory and name it 'krdwrd'
+* Add krdwrd to jamfserver/Components/Makefile.am
+* Add Components/krdwrd/Makefile.am to the list at the end of jamfserver/configure.ac
+* Re-Build jamf

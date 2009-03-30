@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<component name="CoordMask" authors="jss" version="1.0">
+  <description> 
+      Creates a binary mask from rectangle coordinates
+  </description>
+  <header>
+    <out name="output">
+      8bit matrix the same size as <i>ref</i>
+    </out>
+    <in name="ref">
+      Reference image to determine output size
+    </in>
+    <in name="input">
+      <math>Nx4</math> vector of rectangle coordinates <math>x1, y1, x2, y2</math>.
+      Areas covered by rectangles specified in <i>input</i> are set to 255, the rest of the matrix is set to 0.
+    </in>
+  </header>
+</component>
