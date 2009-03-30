@@ -10,7 +10,7 @@ int main (int argc, const char * argv[])
     {
         printf("Usage: %s INPUTIMAGE OUTPUTIMAGE COORDINATES\n" 
                "Reads left top width height from COORDINATES and draws rectangles\n" 
-               "an INPUTIMAGE, writing the result to OUTPUTIMAGE\n", argv[0]);
+               "on INPUTIMAGE, writes result to OUTPUTIMAGE\n", argv[0]);
         return 1;
     }
     FILE * f = fopen(argv[3], "r");
