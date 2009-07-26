@@ -3,6 +3,10 @@ MAILDIR=$HOME/Mail
 LOGFILE=$HOME/Mail/log
 SENDER=`formail -c -xFrom:`
 
+:0:
+* (^X-SA-Exim-Scanned:|^X-Spam-Flag:) (YES|Yes)
+! egon
+
 :0fwh
 | $FORMAIL -A"Reply-To: krdwrd@krdwrd.org, $SENDER" -IDkim-signature -IDomainkey-signature
 
@@ -16,6 +20,5 @@ list
 ! egon
 
 :0: $MAILDIR/mhonarch.lock
-| cat - > /dev/null; $HOME/utils/trac/searchexternal/mailutils/update.sh
-
+| cat - > /dev/null; $HOME/utils/trac/maillist/mailutils/initdb.sh
 
